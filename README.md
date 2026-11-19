@@ -4,13 +4,14 @@
 [![rank](https://make.fun/badge/news-image-20261118/hungndp/news-image-20261118/rank.svg)](https://make.fun/bounty/news-image-20261118/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261118)
 [![reward](https://make.fun/badge/news-image-20261118/hungndp/news-image-20261118/reward.svg)](https://make.fun/bounty/news-image-20261118?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261118)
 
-An entry for make.fun's `news-image-20261118` bounty: a program that draws
-a 1024x1024 editorial poster summing up the world's news of Wednesday
-18 November 2026 — 110 stories first reported that day, six of them as
-large illustrated hero panels, the rest in a four-column regional index,
-plus a UTC timeline of the day's turning points and a date-check footer.
-Everything is drawn in code: a hand-built 5x7 bitmap font, vector
-pictograms, and a small PNG encoder. No network, no assets, no photos.
+A make.fun `news-image-20261118` entry: a program that draws a
+1024x1024 editorial poster summing up the world's news of Wednesday
+18 November 2026 — 134 stories first reported that day, eight of them
+as large illustrated lead panels, the rest in a four-column regional
+index, plus a markets-and-sport ticker, a UTC timeline of the day's
+turning points, and a date-check footer. Everything is drawn in code:
+a hand-built 5x7 bitmap font, vector pictograms, and a small PNG
+encoder. No network, no assets, no photos.
 
 ## Run it
 
@@ -20,8 +21,8 @@ mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
 
 `main.ts` (Node 22, standard library only) reads the story data from
 `stories.ts` and writes `entry.png` to `$MAKEFUN_OUTPUT_DIR` (default
-`/output`). Two runs produce byte-identical output (verified: three runs,
-one sha256).
+`/output`). Three runs produce byte-identical output (verified: three
+runs, one sha256 `7d4dbc17847f17890cebdefddd6bad942468381f1a3e9a4ca43be7639d64b1dc`).
 
 ---
 
@@ -30,102 +31,126 @@ Entered on [make.fun](https://make.fun/?ref=ebjdb2tv&utm_source=github&utm_mediu
 ## The poster
 
 - **Masthead:** "WEDNESDAY 18 NOVEMBER 2026" and the story count.
-- **Six hero stories** (illustrated, with a one-line summary each):
-  1. Iran's drones hit US bases in Kuwait and Bahrain.
-  2. Ukraine's strikes drop the Kerch Bridge's 227 m road arch into the sea.
+- **Eight lead stories** (illustrated, with a one-line deck each):
+  1. Iran's drones hit US bases in the Gulf.
+  2. Ukraine's strikes drop the Kerch Bridge's 227 m road span into the sea.
   3. Xi meets Putin in Shenzhen on the eve of the Trump-Xi-Putin summit.
   4. Voyager 1 reaches one light-day from Earth (10:16 UTC).
   5. Nvidia posts a record $115.8bn quarter and guides $130bn next.
   6. Severe Cyclone Akvan bears down on India's east coast.
-- **UTC timeline:** Bahrain intercepts drones (00:16), Akvan turns severe
-  (09:00), Voyager's milestone (10:16), the EU's EUR45bn Ukraine loan
-  (10:30), Iran hits the US base in Kuwait (13:29), the Kerch collapse is
-  confirmed (17:36), Fed minutes point to more hikes (19:00), Anthropic
-  prices its IPO at $83 (21:26).
-- **Index:** 104 more stories in four columns — Middle East and Gulf,
-  Africa, Science and Culture, Europe and Ukraine, Sport, Asia-Pacific,
-  Markets, and the Americas.
+  7. GTA VI rolls out worldwide as gamers enter Vice City.
+  8. MS Dhoni retires from the IPL.
+- **Ticker strip:** the day's markets (Dow -566 to 50,193, S&P down a
+  fifth straight day, Nasdaq up, gold $3,736, oil $83) and sport
+  (USA 8-0, Argentina 7-0, Brazil 7-0, Duckett 133, NZ 236-5).
+- **UTC timeline:** Bahrain stops a drone raid (00:16), Akvan turns
+  severe (09:00), Voyager's milestone (10:16), the EU's EUR45bn
+  Ukraine loan pitch (10:30), Iran hits the US base in Kuwait
+  (13:29), the Kerch collapse is confirmed (17:36), Fed minutes
+  point to more hikes (19:00), Anthropic prices its IPO at $83
+  (21:26).
+- **Index:** 126 more stories in four columns — Middle East and Gulf,
+  Africa, Science and Culture, Europe and Ukraine, Sport,
+  Asia-Pacific, Markets, and the Americas.
 - **Date check footer:** every story was first reported on Wednesday
   18 November 2026, with the sources named.
 
-## The 110 stories
+## The 134 stories
 
-### Heroes (6)
+### Leads (8)
 
-1. **Middle East — Iran drones hit US bases in Kuwait and Bahrain.**
-   Tehran's drones hit a US base in Kuwait; Bahrain intercepts more raids.
-2. **Ukraine war — Kerch Bridge road arch falls into the sea.**
-   Ukraine's strikes drop a 227 m road span; rail stands, road closed.
-3. **Summit eve — Xi meets Putin in Shenzhen as Trump flies in.**
-   The three leaders meet Thursday; trade, Ukraine and arms on the table.
-4. **Space — Voyager 1 reaches one light-day from Earth.**
-   Signals now take 24 hours each way; the farthest human object ever.
-5. **Business — Nvidia posts a record $115.8bn quarter.**
-   Revenue doubles to $115.8bn and guides $130bn; board bars Huang.
-6. **Weather — Cyclone Akvan bears down on India's coast.**
-   Severe storm, winds to 110 kmph, heads for Andhra Pradesh and Odisha.
+1. **Middle East — Iran drones hit US Gulf bases.**
+   Tehran hits Kuwait base; Bahrain stops more raids.
+2. **Ukraine war — Kerch Bridge span falls in sea.**
+   Ukraine drops 227 m span; rail stands, road shut.
+3. **Summit eve — Xi and Putin meet in Shenzhen.**
+   Three leaders meet Thursday; trade on the table.
+4. **Space — Voyager 1: one light-day out.**
+   Signals take 24 hours each way; farthest ever.
+5. **Business — Nvidia posts record $115.8bn.**
+   Revenue doubles; guides $130bn; board bars Huang.
+6. **Weather — Cyclone Akvan nears India.**
+   Winds to 110 kmph head for Andhra and Odisha.
+7. **Culture — GTA VI rolls out worldwide.**
+   Gamers enter Vice City as global rollout begins.
+8. **Sport — Dhoni retires from the IPL.**
+   India great ends IPL career; fans say farewell.
 
-### Index (104)
+### Index (126)
 
-**Middle East + Gulf:** US strikes Qeshm missile site; Iran says it
-downed a US drone; Houthis hit Saudi pipeline sites; Board of Peace
-faults both sides; Gaza cold kills in tents; 950,000 Gazans on flood
-ground; UK sanctions 8 settlement firms; Israel vows UK retaliation;
-Kahana elected Knesset speaker; 3rd US carrier joins the Gulf; Bahrain
-sounds all-clear twice; Kuwait air defence engages drones.
+**Middle East + Gulf:** US jets hit Qeshm launch site; Tehran claims
+a US drone downed; Houthis strike Saudi pipelines; peace board
+blames both sides; Gaza cold kills camp families; 950,000 Gazans
+face flood risk; Britain sanctions 8 settler firms; Israel vows to
+hit back at UK; Kahana wins Knesset speaker vote; third US carrier
+sails to Gulf; Bahrain gives all-clear twice; Kuwait guns engage
+the drones; tanker Tara Gas hit, sailor lost; Kataib Hezbollah
+told to quit town.
 
-**Africa:** Ebola in DRC tops 11,000 cases; 7 in 10 young Ebola patients
-die; Ethiopia-Eritrea troops mass; MSF: Ebola funds going missing.
+**Africa:** DRC Ebola cases pass 11,000; Ebola kills 7 in 10 young
+cases; troops mass on Ethiopia border; MSF warns Ebola cash
+vanishing; Sudan-Ethiopia tensions escalate.
 
-**Science + Culture:** Word of the year: Human; Oxford word shortlist
-revealed; Voyager 2 due one light-day 2035; NASA: send a light signal
-tonight.
+**Science + Culture:** Word of the year is Human; Oxford unveils
+word shortlist; Voyager 2 hits mark in 2035; NASA urges light
+signal tonight.
 
-**Europe + Ukraine:** Putin not ready for peace talks; EU proposes
-EUR45bn Ukraine loan; Russia to double drones to 20m; Pistorius rebukes
-Colby on strikes; bridge strike bypassed Starlink; third bridge attack
-this week; bridge debris blocks shipping; Ukraine hits warship off
-Finland; Dnipro drone raid injures six; 8,000 hoax bomb threats in
-Europe; Lammy: pledge EU rejoin, then vote; US spy suspect in US
-custody; COP31 deadlock as ministers arrive; Antalya AI pledge wins 80
-backers; Turkey power plan backed by 75; Deutsche Bank -6% on Epstein
-links; An-12 crash in Siberia kills 19; E1 building deals delayed;
-IPCC date split: 2028 push; COP31: slow first half, tough week; NATO
-unveils new comms strategy; EU loan needs all 27 to agree.
+**Europe + Ukraine:** Putin not ready to talk peace; EU pitches
+EUR45bn Kyiv loan; Russia plans 20m drones a year; Pistorius slaps
+down Colby; bridge raid dodged Starlink; third bridge raid in a
+week; wreckage blocks Kerch shipping; Kyiv hits warship off
+Finland; Dnipro drone raid wounds six; 8,000 hoax bomb scares in
+EU; Lammy: vow rejoin, then vote; suspected US spy held in US;
+COP31 stuck as ministers land; Antalya AI pledge gets 80 backers;
+Turkey energy plan wins 75 votes; Deutsche Bank -6% on Epstein
+ties; An-12 crash kills 19 in Siberia; E1 building deals pushed
+back; IPCC split over 2028 date; COP31: slow start, hard week;
+NATO rolls out comms strategy; Kyiv loan needs all 27 in EU;
+Russia says 1,400 drones downed; 141 Russian drones overnight;
+Burnham: Brexit has not worked.
 
-**Sport:** USA 8-0 in Pochettino farewell; Argentina thrash Costa Rica
-7-0; England win ODI series in Australia; Ecuador beat Bolivia 2-0;
-Uruguay rout Dominican Rep 5-0; Guler signs Real deal to 2032; Sabadell
-win 3-0 in Copa del Rey; United Kurung win 2-1 in Arunachal.
+**Sport:** USA win 8-0 in Poch farewell; Argentina rout Costa Rica
+7-0; England take ODI series in Aus; Ecuador down Bolivia 2-0;
+Uruguay thrash Dominican Rep 5-0; Guler extends Real deal to 2032;
+Sabadell win 3-0 in Copa; Kurung win 2-1 in Arunachal; NZ 236-5 in
+India Test opener; Mexico edge Jamaica 1-0; Brazil rout Singapore
+7-0; Duckett 133 seals ODI series; Yas Lions win Abu Dhabi T10.
 
-**Asia-Pacific:** Quad meets in Manila, first in 2 yrs; Trump claims big
-Philippines deal; Manila: no deal signed, no terms; US-Thai trade
-statement signed; ASEAN ends, Singapore takes chair; Xi greets Trump on
-the tarmac; Carney to meet Trump at APEC; Seoul warms ties with Beijing;
-Taiwan logs 10 PLA sorties; Myanmar reviews ASEAN ties; Russian jets off
-Taiwan, Japan; Chitwan Rhinos win NPL by 61 runs; Puducherry beat Assam
-by 61 runs; 300 fishing nets burnt in Prakasam; UAE Bulls win Abu Dhabi
-T10; Indonesia U-17s win qualifier.
+**Asia-Pacific:** Quad meets in Manila after 2 yrs; Trump hails big
+Manila deal; Manila: no deal signed at all; US-Thai trade pact
+signed; ASEAN ends, Singapore takes over; Xi hugs Trump on the
+tarmac; Carney to see Trump at APEC; Seoul warms to Beijing;
+Taiwan counts 10 PLA sorties; Myanmar rethinks ASEAN ties; Russian
+jets near Taiwan, Japan; Chitwan win NPL by 61 runs; Puducherry
+beat Assam by 61; 300 fishing nets burnt in India; UAE Bulls take
+Abu Dhabi T10; Indonesia U-17s take qualifier; ICJ Rohingya verdict due
+Thurs; S Korea exams add 8,400 staff.
 
-**Markets:** Oil eases to $83 a barrel; Nikkei ends up 0.37% at 59,076;
-BIST-100 slides 1.53%; Vera Rubin ramp: $20bn in Q1.
+**Markets:** Crude eases to $83 a barrel; Nikkei closes up 0.37% at
+59,076; BIST-100 down 1.53% in Istanbul; Vera Rubin to hit $20bn
+in Q1; Dow loses 566 to 50,193; Nvidia slides 2.9% on results;
+UnitedHealth sinks 10%; cyber stocks jump 4.7%; Fed: bigger hike
+possible.
 
-**Americas:** Peltola flips Alaska, Dems 56-44; Fed minutes: more hikes
-likely; Waller urges 50bp December hike; Danske: 3 more hikes by March;
-Anthropic IPO prices at $83; stocks split: Dow -1.1%, Nasdaq up; S and P
-500 falls 5th straight day; Nvidia board rejects Huang return; Huang to
-face Senate Banking panel; Senate plans AI safety hearings; AI models
-mistook civilians; critical Java flaw found by AI; NSA outage: Rubio
-sees no link; US loses measles-free status; Kennedy vows to regain
-status; ICE: no ships for deportations; New Jersey sues DHS over
-detention; Garcia targets Trump Jr, Vance; Kalshi halts mention markets;
-students sue over AI gun detector; Cook snubs Dec 14 Fed hearing; FDA
-nominee Overton dropped; FAA halts router installations; Duffy seeks
-$50.1bn for air traffic; Mullin defends plane trip to game; Hegseth
-names new Army chief; IRS probes left-wing groups; Trump BBC deposition
-moved to Jan 22; flu kills 5 children this season; TJX jumps 8% on
-results; home sales fall to record low; gold slides 3% to $3,736; dollar
-hits 19-month high; China leads Treasury sell-off.
+**Americas:** Peltola takes Alaska, Dems 56-44; Fed minutes point
+to more hikes; Waller wants 50bp December hike; Danske sees 3 more
+hikes by March; Anthropic IPO priced at $83; stocks split: Dow
+down, Nasdaq up; S&P 500 down 5th day running; Nvidia board blocks
+Huang return; Huang faces Senate Banking panel; Senate sets AI
+safety hearings; AI models mistook civilians: probe; AI finds
+critical Java flaw; NSA outage: Rubio rules out link; America
+loses measles-free tag; Kennedy vows to win status back; ICE has
+no ships for removals; New Jersey sues DHS on detention; Garcia
+goes after Trump Jr, Vance; Kalshi pauses mention markets;
+students sue over AI gun scanner; Cook skips Dec 14 Fed hearing;
+FDA nominee Overton is dropped; FAA halts router installs; Duffy
+wants $50.1bn for air traffic; Mullin defends game plane trip;
+Hegseth picks new Army chief; IRS opens probe into left groups;
+Trump BBC deposition moved to Jan; flu has killed 5 children so
+far; TJX surges 8% on results; home sales hit record low; gold
+down 3% to $3,736; dollar at 19-month high; China leads Treasury
+dump; Costa Rica journalist shot dead; Trump plotter jailed 27
+years; Canada pushes APAC trade shift; Pope leaves Peru after tour.
 
 ## Sources
 
@@ -133,18 +158,21 @@ Every story was checked against reporting first published on
 18 November 2026: Reuters, AP, BBC, New York Times, Wall Street
 Journal, Al Jazeera, UN News, the India Meteorological Department,
 NASA, Anthropic, Nvidia, the UK Foreign Office, and PAHO — plus
-Just Security's Early Edition, the Defense News, BusinessWorld,
-AgencEurope, the Motley Fool, Cointelegraph, and the open news
-briefings that covered the day (Open Chronicle, Horizon, Zark News,
-Pollar, the Library Estate). Headlines are written in the poster's own
-words; figures are as reported (Nvidia $115.8bn revenue, Kerch arch
-227 m, Ebola 11,000+ cases, measles 5,400+ cases, Anthropic $83 IPO).
+AFP, the South China Morning Post, Just Security's Early Edition,
+Defense News, BusinessWorld, AgencEurope, the Motley Fool,
+Cointelegraph, and the open news briefings that covered the day
+(Open Chronicle, Horizon, Zark News, Pollar, the Library Estate).
+Headlines are written in the poster's own words; figures are as
+reported (Nvidia $115.8bn revenue, Kerch span 227 m, Ebola 11,000+
+cases, Anthropic $83 IPO, Dow -566 to 50,193).
 
 ## How it is built
 
-- `main.ts` — the program: PNG encoder, canvas helpers, 5x7 bitmap
-  font, six vector pictograms, and the poster layout.
-- `stories.ts` — the 110 stories, the UTC timeline, and the source list.
+- `main.ts` — the program: PNG writer, a small canvas class, 5x7
+  bitmap font stored as seven 5-bit rows per glyph, eight vector
+  pictograms, and the poster layout (masthead, 4x2 lead grid,
+  ticker, timeline, four-column index, footer).
+- `stories.ts` — the 134 stories, the UTC timeline, and the source list.
 - `system-prompt-real.txt` — the system prompt this build ran under,
   for the submission's run record.
 - `LICENSE` — MIT.
@@ -152,7 +180,8 @@ words; figures are as reported (Nvidia $115.8bn revenue, Kerch arch
 ## Checks
 
 - `mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts` writes a
-  1024x1024 PNG under 1 MiB.
+  1024x1024 PNG under 1 MiB (45,840 bytes, sha256 `7d4dbc17…b1dc`).
 - Three consecutive runs give identical sha256 bytes (deterministic).
 - Rendered and inspected at full size and downscaled to 300 px wide:
-  masthead and hero text stay clearly readable; the index stays crisp.
+  masthead and lead text stay clearly readable; the index stays crisp;
+  no overlapping or truncated text.
